@@ -8,10 +8,37 @@
   <link rel="preload" href="fonts/Gilroy.woff2" as="font" crossorigin="anonymous">
   <link rel="preload" href="fonts/Gilroy.woff" as="font" crossorigin="anonymous">
   <link href="css/style.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-beta.1/dist/css/select2.min.css" rel="stylesheet" />
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Langar&display=swap" rel="stylesheet">
+  <style>
+    .options{
+      width:100%;
+      height:50px;
+    }
+    #get{
+      display:none;
+    }
+    .tell{
+    margin-left:75%;
+    margin-bottom:200px;
+    height: 150px;
+    width:30%;
+    border-radius:10%;
+    background-color: rgb(170, 215, 255);
+    border:none;
+    }
+    .tell:placeholder-shown{
+      font-size:13px;
+      font-family: 'Langar', cursive;
+      padding-left:10px;
+    }
+
+  </style>
+ 
 </head>
 
 <body class="blog-page">
-
   <header class="page-header">
     <div class="container">
       <div class="page-header__wrapper">
@@ -53,11 +80,13 @@
     </section>
     <section class="page-main__input-group input-group">
       <div class="container">
-        <div class="input-group__item">
-          <div class="input-group__search-icon">
-            <img class="input-group__icon" src="img/search.svg" alt="search">
-          </div>
-          <input class="input-group__input input-group__input--search" type="text" placeholder="Search Article" id="search" name="search" required="">
+          <select class="options"  multiple="multiple">
+           <option value="co">Massa</option>
+            <option value="fe">Feugiat<option>
+            <option value="pr">Sociis<option>
+            <option value="qw">Cursus</option>
+            <option value="cof">Morbi</option>
+          </select>
         </div>
       </div>
     </section>
@@ -240,8 +269,8 @@
             <ul class="overview__list">
               <li class="overview__item overview__item--auto">
                 <img class="overview__image" src="img/auto.png" width="300" height="200" alt="auto">
-                <div class="overview__card-wrapper">
-                  <h3 class="overview__title">Massa eu in laoreet enim augue vulputate nunc.</h3>
+                <div class="overview__card-wrapper" id="co">
+                  <h3 class="overview__title">Massa eu in laoreet enim augue vulputate nunc.</a></h3>
                   <p class="overview__presentation">
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lectus quisque magna in nisl nibh bibendum ipsum, elit duis. Donec.
                   </p>
@@ -348,7 +377,8 @@
               Lorem ipsum dolor sit amet, consectetur adipisicing elit,<br> sed do eiusmod tempor incididunt ut labore
               et dolore<br> magna aliqua. Ut enim ad minim veniam.
             </p>
-            <a class="sentence__button" href="#">Let’s Talk</a>
+            <div class="sentence__button" onclick="viewDiv()">Let’s Talk</div>
+            <div id="get"><input class="tell" placeholder="tell us about yourself..."></input></div>
           </div>
           <div class="sentence__line"></div>
         </div>
@@ -425,10 +455,26 @@
     </div>
   </footer>
 
-  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
   <script src="js/slick.min.js"></script>
   <script src="js/script.min.js"></script>
-  
+  <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-beta.1/dist/js/select2.min.js"></script> 
+  <script> 
+  $(document).ready(function() {
+    $('.options').select2()
+    });
+    $('.options').on("change", function(event){
+      console.log(event.target.value)
+      window.location.hash = event.target.value
+      
+    })
+  </script>
+  <script>
+ function viewDiv(){
+  document.getElementById("get").style.display = "block";
+};
+      
+</script>
 </body>
 
 </html>
