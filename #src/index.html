@@ -9,7 +9,26 @@
   <link rel="preload" href="fonts/Gilroy.woff" as="font" type="font/woff" crossorigin="anonymous">
   <link href="css/style.min.css" rel="stylesheet">
 </head>
+<style>
+  #get{
+      display:none;
+    }
+  .tell{
+  margin-left:34%;
+  margin-bottom:200px;
+  height:70px;
+  width:25%;
+  border-radius:10%;
+  background: url("img/blue.png") no-repeat;
+  border:none;
+  }
+  .tell:placeholder-shown{
+    font-size:13px;
+    font-family: 'Langar', cursive;
+    padding-left:10px;
+  }
 
+</style>
 <body>
 
   <header class="page-header">
@@ -48,13 +67,13 @@
             <h1 class="intro__title">New Automation <br> Tool for Your Home</h1>
             <p class="intro__text">Lorem ipsum dolor sit amet, consectetur adipiscing<br> elit.
               Faucibus tristique vulputate ultrices ut mauris<br> tellus at. Posuere sollicitudin odio tellus elit.</p>
-            <a class="intro__button" href="#">See Our Project</a>
+            <a class="intro__button" href="#fre">See Our Project</a>
           </div>
           <div class="intro__background"></div>
         </div>
       </div>
     </section>
-    <section class="page-main__features features">
+    <section class="page-main__features features" id="fre">
       <div class="container">
         <div class="features__wrapper">
           <h2 class="features__list-title">What we do to help<br> our client grow in<br> digital era,</h2>
@@ -161,7 +180,8 @@
               Lorem ipsum dolor sit amet, consectetur adipisicing elit,<br> sed do eiusmod tempor incididunt ut labore
               et dolore<br> magna aliqua. Ut enim ad minim veniam.
             </p>
-            <a class="sentence__button" href="#">Let’s Talk</a>
+            <div class="sentence__button" onclick="viewDiv()">Let’s Talk</div>
+            <div id="get"><input class="tell" placeholder="tell us about yourself..."></input></div>
           </div>
           <div class="sentence__line"></div>
         </div>
@@ -241,7 +261,11 @@
   <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
   <script src="js/slick.min.js"></script>
   <script src="js/script.min.js"></script>
-
+  <script>
+    function viewDiv(){
+   document.getElementById("get").style.display = "block";
+ };
+ </script>
 </body>
 
 </html>
