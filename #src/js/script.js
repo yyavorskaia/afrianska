@@ -34,6 +34,17 @@ $(document).ready(function () {
     speed: 1000,
     autoplaySpeed: 800,
   });
+   $(document).ready(function() {
+    $('.options').select2()
+    });
+    $('.options').on("change", function(event){
+      console.log(event.target.value)
+      window.location.hash = event.target.value
+      
+    })
+    function viewDiv(){
+  document.getElementById("get").style.display = "block";
+};
 });
 
 $(document).ready(function () {
