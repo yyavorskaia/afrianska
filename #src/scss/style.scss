@@ -14,6 +14,7 @@ $desktop-width: 1140px;
 * {
   transition: all .1s ease-in;
 }
+
 html {
   scroll-behavior: smooth;
 }
@@ -31,23 +32,26 @@ body {
 
   overflow-x: hidden;
 }
-  #get{
-      display:none;
-    }
-  .tell{
-  margin-left:35%;
-  margin-bottom:200px;
-  height:70px;
-  width:25%;
-  border-radius:10%;
+
+#get {
+  display: none;
+}
+
+.tell {
+  margin-left: 35%;
+  margin-bottom: 200px;
+  height: 70px;
+  width: 25%;
+  border-radius: 10%;
   background: url("img/blue.png") no-repeat;
-  border:none;
-  }
-  .tell:placeholder-shown{
-    font-size:13px;
-    font-family: 'Langar', cursive;
-    padding-left:10px;
-  }
+  border: none;
+}
+
+.tell:placeholder-shown {
+  font-size: 13px;
+  font-family: 'Langar', cursive;
+  padding-left: 10px;
+}
 
 a {
   display: block;
@@ -1318,11 +1322,12 @@ svg {
 }
 
 @media (min-width: $tablet-width) {
-  .options{
+  .options {
     box-sizing: border-box;
-    width:70%;
-    height:50px;
+    width: 70%;
+    height: 50px;
   }
+
   .page-header {
     &__wrapper {
       padding-bottom: 1.875rem;
