@@ -15,6 +15,10 @@ $desktop-width: 1140px;
   transition: all .1s ease-in;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   position: relative;
 
@@ -48,8 +52,6 @@ svg {
   margin: 0 auto;
   padding-left: 15px;
   padding-right: 15px;
-
-  /*border: 1px solid red;*/
 }
 
 .page-header {
@@ -194,6 +196,8 @@ svg {
 }
 
 .page-main {
+  scroll-behavior: smooth;
+
   &__wrapper-two {
     background-color: #5a98d0;
   }
@@ -310,6 +314,8 @@ svg {
 }
 
 .features {
+
+
   &__wrapper {
     display: flex;
     flex-direction: column;
@@ -1312,10 +1318,6 @@ svg {
       margin-right: 3.75rem;
       margin-bottom: 0;
     }
-
-    &__item:nth-child() {
-      margin-right: 0;
-    }
   }
 
   .page-main {
@@ -1719,6 +1721,7 @@ svg {
     }
 
     &__title {
+      min-height: 100px;
       font-size: 18px;
     }
 
