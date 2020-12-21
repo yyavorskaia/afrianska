@@ -31,22 +31,24 @@ body {
 
   overflow-x: hidden;
 }
-.tell{
-  position: relative;
-  margin-left:75%;
+  #get{
+      display:none;
+    }
+  .tell{
+  margin-left:35%;
   margin-bottom:200px;
-  height: 90px;
-  width:30%;
-  border-radius:4%;
-  background:url(../img/blue.png) no-repeat;
+  height:70px;
+  width:25%;
+  border-radius:10%;
+  background: url("img/blue.png") no-repeat;
   border:none;
   }
   .tell:placeholder-shown{
     font-size:13px;
     font-family: 'Langar', cursive;
     padding-left:10px;
-    
   }
+
 a {
   display: block;
 
